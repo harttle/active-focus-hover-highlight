@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Active Hover Focus</title>
+</head>
+<body>
+  <style>
+  a {
+    background: none;
+    color: black;
+    text-decoration: none;
+  }
+  a.active:active, a.hover:hover, a.focus:focus {
+    background: yellow;
+  }
+  a.taphl {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+  </style>
+
+  <p><a class="focus" href="#">Focus to Change Background</a></p>
+  <p><a class="hover" href="#">Hover to Change Background</a></p>
+  <p><a class="active" href="#">Active to Change Background</a></p>
+  <p><a class="taphl active" href="#">This Anchor Has NO Tap Highlight</a></p>
+
+  <script>
+  document.body.addEventListener('touchmove', console.log)
+  </script>
+
+  <footer><a href="https://harttle.land">https://harttle.land</a></footer>
+</body>
+</html>
